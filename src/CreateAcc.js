@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./CreateAcc.css";
+import { Link } from 'react-router-dom';
 
 function CreateAcc() {
     const [password, setPassword] = useState("");
@@ -60,9 +61,7 @@ function CreateAcc() {
                 {error && <p style={{ color: "red" }}>{error}</p>}
 
                 <button type="submit">Criar Conta</button>
-                <a href="/login" id="iniciarSessao">Iniciar Sessão</a>
-                
-               
+                <Link to="/Login" id="iniciarSessao">Iniciar Sessão</Link>     
             </form>
         </div>
     );

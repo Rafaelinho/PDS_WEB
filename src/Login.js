@@ -1,7 +1,29 @@
 import './Login.css';
 import './index.css';
+import { Link } from 'react-router-dom';
 import React ,{useState}from 'react';
 
+const checkLogin = async (userName, userPassword) => {
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userName, userPassword })
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao fazer login');
+        }
+
+        const data = await response.json(); // Converte a resposta para JSON
+        return data;
+    } catch (error) {
+        console.error('Erro:', error);
+        return null;
+    }
+};
 
 function Login() {
 
@@ -32,8 +54,8 @@ function Login() {
                     <label htmlFor="seePassword">Mostrar palavra-passe</label>
                 </div>
                 
-                <button type="submit">Iniciar Sessão</button>
-                <a href="/CreateAcc.js" id="iniciarSessao">Criar Conta</a>
+                <button type="submit" onClick={checkLogin}>Iniciar Sessão</button>
+                <Link to="/signup" id="criarConta">Criar Conta</Link>
             </form>
         </div>
     );
