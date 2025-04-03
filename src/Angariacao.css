@@ -2,7 +2,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 0px 20px hsla(0, 0%, 0%, 0.1);
 }
 
 nav ul {
@@ -32,7 +32,7 @@ nav ul li a::after { /* Este pseudo-elemento cria o efeito de underline */
     bottom: -2px;
     width: 0;
     height: 2px;
-    background-color: #3578e5;
+    background-color: hsl(217, 77%, 55%);
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
 }
@@ -50,8 +50,8 @@ nav .logo{
 }
 nav .logo img{
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 nav .user-info{
@@ -66,4 +66,60 @@ nav .user-info img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
+}
+
+.angariacao-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.angariacao-header .search-bar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+.angariacao-header .search-bar input{
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 500px;
+}
+.angariacao-header .search-bar input::placeholder{
+    color: hsl(0, 0%, 0%, 0.5);
+    font-size: 14px;
+    font-weight: 400;   
+}
+.angariacao-header .search-bar button{
+    padding: 7px 15px;
+    border: none;
+    color: hsl(0, 0%, 0%);
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    transform: translateX(-56px);
+}
+
+.filter{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0px 20px;
+}
+
+.filter .filter-button{
+    padding: 7px 15px;
+    border: none;
+    color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+.filter .filter-button:hover{
+    background-color: hsl(0, 0%, 0%);
+    color: white;
 }
