@@ -48,10 +48,15 @@ nav .logo{
     padding: 10px;
     cursor: pointer;
 }
+
+nav .logo h1{
+    font-size: 20px;
+}
+
 nav .logo img{
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
 }
 nav .user-info{
@@ -61,10 +66,16 @@ nav .user-info{
     padding: 10px;
     cursor: pointer;
 }
+nav .user-info h2{
+    font-size: 15px;
+    font-weight: 600;
+    color: hsl(0, 0%, 0%, 0.7);
+}
+
 nav .user-info img{
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
 }
 
@@ -122,4 +133,25 @@ nav .user-info img{
 .filter .filter-button:hover{
     background-color: hsl(0, 0%, 0%);
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
 }
