@@ -55,7 +55,7 @@ function Angariacao() {
                     </div>
                 </div>
 
-                /* Só exibe os cards se houver itens */
+                {/* Só exibe os cards se houver itens  */}
                 {items.length > 0 ? (
                     <div className="angariacao-list">
                         {items.map((item) => (
