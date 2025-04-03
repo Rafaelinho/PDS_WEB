@@ -1,0 +1,68 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: hsla(0, 0%, 0%, 0.7);
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 5px 20px;
+    position: relative; /* Necessário para o ::after funcionar corretamente */
+}
+
+nav ul li a:hover {
+    color: hsl(207, 81%, 52%);
+}
+
+nav ul li a::after { /* Este pseudo-elemento cria o efeito de underline */
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #3578e5;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+nav .logo img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+nav .user-info{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+nav .user-info img{
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}

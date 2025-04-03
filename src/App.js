@@ -1,15 +1,15 @@
 import './App.css';
-import React from 'react';
-import Login from './Login';
-import CreateAcc from './CreateAcc';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+// import React from 'react';
+// import Login from './Login';
+// import CreateAcc from './CreateAcc';
+// import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Angariacao from './Angariacao';
 
-let User = {};
 
 function App() {
 
   return (
-    <BrowserRouter>
+   /* <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
 
@@ -18,6 +18,8 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+    */
+    <Angariacao />
   );
 }
 
