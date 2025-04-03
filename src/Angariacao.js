@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'; // ✅ Adicionando importação necessária
+import { useState, useEffect } from 'react'; // Adicionando importação necessária
 import './Angariacao.css';
 import './index.css';
 import logo from './logo.png';
@@ -11,7 +11,7 @@ function Angariacao() {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await fetch('https://api.example.com/items'); // 🔄 Substituir pela API real
+                const response = await fetch('https://api.example.com/items'); // Substituir pela API real
                 const data = await response.json();
                 setItems(data);
             } catch (error) {
@@ -19,8 +19,8 @@ function Angariacao() {
             }
         };
 
-        fetchItems(); // ✅ Agora chamamos a função dentro do useEffect
-    }, []); // ✅ Dependência vazia [] significa que executa apenas ao montar o componente
+        fetchItems(); //  Agora chamamos a função dentro do useEffect
+    }, []); //  Dependência vazia [] significa que executa apenas ao montar o componente
 
     return (
         <>
@@ -55,15 +55,15 @@ function Angariacao() {
                     </div>
                 </div>
 
-                {/* ✅ Só exibe os cards se houver itens */}
+                /* Só exibe os cards se houver itens */
                 {items.length > 0 ? (
                     <div className="angariacao-list">
                         {items.map((item) => (
                             <div key={item.id} className="angariacao-item">
+                                <img src={item.image} alt={item.title} />
                                 <h3>{item.title}</h3>
                                 <p>{item.description}</p>
                                 <p>Preço: {item.price}€</p>
-                                <button className="angariacao-button">Ver Detalhes</button>
                             </div>
                         ))}
                     </div>
