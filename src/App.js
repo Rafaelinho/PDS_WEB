@@ -1,25 +1,26 @@
 import './App.css';
-// import React from 'react';
-// import Login from './Login';
-// import CreateAcc from './CreateAcc';
-// import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
+import Login from './Login';
+import CreateAcc from './CreateAcc';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Angariacao from './Angariacao';
 
 
 function App() {
 
   return (
-   /* <BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
 
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<CreateAcc />} />
+        <Route path="/angariacoes" element={<Angariacao />} />
 
       </Routes>
     </BrowserRouter>
-    */
-    <Angariacao />
+    
+    //<Angariacao />
   );
 }
 
