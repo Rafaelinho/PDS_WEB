@@ -10,7 +10,7 @@ const checkLogin = async (userName, userPassword) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ userName, userPassword })
+            body: JSON.stringify({ Username: userName, Password: userPassword })
         });
 
         if (!response.ok) {
@@ -22,6 +22,19 @@ const checkLogin = async (userName, userPassword) => {
     } catch (error) {
         console.error('Erro:', error);
         return null;
+    }
+};
+
+const handleLogin = async () => {
+    const data = await checkLogin(username, password);
+
+    if (!data) {
+        alert('Login falhou');
+    } else {
+        localStorage.setItem('token', data.token);
+        localStorage.setItem('userID', data.userID);
+        // Redirecionar ou atualizar o estado do app
+        console.log('Login feito com sucesso');
     }
 };
 
@@ -54,7 +67,7 @@ function Login() {
                     <label htmlFor="seePassword">Mostrar palavra-passe</label>
                 </div>
                 
-                <button type="submit" onClick={checkLogin}>Iniciar Sessão</button>
+                <button type="submit" onClick={handleLogin}>Iniciar Sessão</button>
                 <Link to="/signup" id="criarConta">Criar Conta</Link>
             </form>
         </div>
