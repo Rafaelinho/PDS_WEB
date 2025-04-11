@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react'; // Adicionando importação necessária
-import './Angariacao.css';
-import './index.css';
-import logo from './logo.png';
-import profifePic from './profilePic.png';
+import './Angariacao.module.css';
 import 'boxicons/css/boxicons.min.css';
 
 function Angariacao() {
@@ -26,7 +23,7 @@ function Angariacao() {
         <>
             <nav>
                 <div className="logo">
-                    <img src={logo} alt="Logo" />
+                    <img src="/logo.png" alt="Logo" />
                     <h1>NeighbourhoodNews</h1>
                 </div>
 
@@ -38,7 +35,7 @@ function Angariacao() {
 
                 <div className="user-info">
                     <h2>Nome do Utilizador</h2>
-                    <img src={profifePic} alt="User" />
+                    <img src="/profilePic.png" alt="User" />
                 </div>
             </nav>
 

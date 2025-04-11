@@ -6,20 +6,19 @@ body{
     align-items: center;
     background-color: #f0f0f0;
 }
-.login-form{
+.loginForm{
     width: 400px;
     padding: 40px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    
 }
-.login-form h1{
+.loginForm h1{
     margin-bottom: 20px;
     text-align: center;
 }
-.login-form input[type="email"],
-.login-form input[type="password"]{
+.loginForm input[type="email"],
+.loginForm input[type="password"]{
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -27,7 +26,7 @@ body{
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-.login-form input[type="text"]{
+.loginForm input[type="text"]{
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -36,7 +35,7 @@ body{
     border-radius: 5px;
 }
 
-.login-form button{
+.loginForm button{
     width: 100%;
     padding: 15px;
     background-color: #000000;
@@ -53,13 +52,13 @@ body{
     color: #000000;
     font-size: 15px;
 }
-.login-form button:hover{
+.loginForm button:hover{
     background-color: #555;
 }
-.login-form button:active{
+.loginForm button:active{
     background-color: #333;
 }
-.login-form .checkBox{
+.loginForm .checkBox{
     margin-bottom: 20px;
 }
 input[type="checkbox"] {

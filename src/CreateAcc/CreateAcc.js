@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./CreateAcc.css";
+import "./CreateAcc.module.css";
 import { Link } from 'react-router-dom';
 
 function CreateAcc() {

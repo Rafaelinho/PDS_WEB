@@ -1,9 +1,9 @@
 import './App.css';
 import React from 'react';
-import Login from './Login';
-import CreateAcc from './CreateAcc';
+import Login from './Login/Login.js';
+import CreateAcc from './CreateAcc/CreateAcc.js';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Angariacao from './Angariacao';
+import Angariacao from './Angariacao/Angariacao.js';
 
 
 function App() {

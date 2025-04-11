@@ -1,5 +1,4 @@
-import './Login.css';
-import './index.css';
+import styles from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 
@@ -49,7 +48,7 @@ function Login() {
 
     return (
         <div>
-            <form className="login-form" onSubmit={handleLogin}>
+            <form className={styles.loginForm} onSubmit={handleLogin}>
                 <h1>Iniciar Sessão</h1>
 
                 <label htmlFor="email">Email</label>
