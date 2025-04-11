@@ -47,7 +47,7 @@ function Login() {
     };
 
     return (
-        <div>
+        <div className={styles.loginContainer}>
             <form className={styles.loginForm} onSubmit={handleLogin}>
                 <h1>Iniciar Sessão</h1>
 

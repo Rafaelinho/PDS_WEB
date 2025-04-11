@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./CreateAcc.module.css";
 import { Link } from 'react-router-dom';
+import styles from './CreateAcc.module.css';
 
 function CreateAcc() {
     const [password, setPassword] = useState("");
@@ -20,8 +21,8 @@ function CreateAcc() {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit} className="CreateAcc-form">
+        <div className={styles.CreateAccContainer}>
+            <form onSubmit={handleSubmit} className={styles.CreateAccForm}>
                 <h1>Criar Conta</h1>
                 
                 <label>Email</label>
