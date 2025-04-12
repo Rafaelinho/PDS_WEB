@@ -1,0 +1,132 @@
+/* src/Leilão/LeilaoPage.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.auctionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.auctionCard {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.auctionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.auctionImage {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auctionImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeLeft {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #4c4c4c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.auctionDetails {
+  padding: 20px;
+}
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.description {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.bidInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.bidLabel {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.bidAmount {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.bidButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.bidButton:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .auctionGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .auctionGrid {
+    grid-template-columns: 1fr;
+  }
+}

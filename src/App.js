@@ -4,6 +4,8 @@ import Login from './Login/Login.js';
 import CreateAcc from './CreateAcc/CreateAcc.js';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Angariacao from './Angariacao/Angariacao.js';
+import LeilaoPage from './Leilão/LeilaoPage.js';
+
 
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
 
+        <Route path="/leilaopage" element={<LeilaoPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<CreateAcc />} />
         <Route path="/angariacoes" element={<Angariacao />} />
