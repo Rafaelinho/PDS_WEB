@@ -18,7 +18,7 @@ const LeilaoPage = () => {
         const response = await fetch('https://localhost:7296/local-leiloes?codigoPostal=4705-157');
 
         if (!response.ok) {
-          throw new Error('Erro ao buscar leilões');
+          throw new Error('Erro ao carregar leilões');
         }
 
         const data = await response.json();
