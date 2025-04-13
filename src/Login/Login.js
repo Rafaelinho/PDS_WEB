@@ -1,12 +1,16 @@
 import styles from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext'; 
 
 function Login() {
     const [seePassword, setSeePassword] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const navigate = useNavigate(); // para redirecionar após login
+    const navigate = useNavigate();
+    
+    // Use o contexto de autenticação
+    const { setUser } = useContext(AuthContext);
 
     const checkLogin = async (userName, userPassword) => {
         try {
@@ -38,11 +42,28 @@ function Login() {
         if (!data) {
             alert('Login falhou');
         } else {
-            localStorage.setItem('token', data.token);
+            // Salvar o token e os dados do usuário
+            localStorage.setItem('authToken', data.token); // Renomeado para corresponder à nossa implementação
             localStorage.setItem('userID', data.userID);
             localStorage.setItem('userName', data.userName);
+            
+            // Salve o código postal se disponível na resposta
+            if (data.codigoPostal) {
+                localStorage.setItem('codigoPostal', data.codigoPostal);
+            }
+            
+            // Atualize o contexto com os dados do utilizador
+            const userData = {
+                id: data.userID,
+                name: data.userName,
+                image: data.userImage || null,
+                codigoPostal: data.codigoPostal // Use um valor padrão se não estiver disponível
+            };
+            
+            setUser(userData);
+            
             alert('Login feito com sucesso');
-            navigate('/angariacoes'); // redireciona após login
+            navigate('/leilaopage'); // redireciona para a página de leilões
         }
     };
 
