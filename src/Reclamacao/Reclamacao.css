@@ -1,0 +1,62 @@
+.reclamacao-container {
+  background-color: #f9f9f9;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.reclamacao-titulo {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.reclamacao-input,
+.reclamacao-textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.reclamacao-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.reclamacao-botao {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reclamacao-botao:hover {
+  background-color: #0056b3;
+}
+
+.reclamacao-mensagem {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.reclamacao-voltar {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.reclamacao-voltar:hover {
+  text-decoration: underline;
+}

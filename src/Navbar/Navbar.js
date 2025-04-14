@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link to="/angariacao" className={styles.navButton}>Angariação</Link>
           <Link to="/leilaopage" className={styles.navButton}>Leilão</Link>
           <Link to="/tickets" className={styles.navButton}>Tickets</Link>
-          <Link to="/reclamação" className={styles.navButton}>Reclamação</Link>
+          <Link to="/reclamacao" className={styles.navButton}>Reclamação</Link>
         </div>
 
         <div className={styles.userProfile} ref={dropdownRef}>

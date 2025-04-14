@@ -7,6 +7,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Angariacao from './Angariacao/Angariacao.js';
 import LeilaoPage from './Leilão/LeilaoPage.js';
 import MeusLeiloes from './Leilão/MeusLeiloes.js';
+import Reclamacao from "./Reclamacao/Reclamacao";
+
 
 
 
@@ -23,6 +25,7 @@ function App() {
           <Route path="/signup" element={<CreateAcc />} />
           <Route path="/angariacoes" element={<Angariacao />} />
           <Route path="/meus-leiloes" element={<MeusLeiloes />} />
+          <Route path="/reclamacao" element={<Reclamacao />} />
         </Routes>
       </Router>
     </AuthProvider>
