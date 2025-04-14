@@ -52,7 +52,7 @@ const Navbar = () => {
 
         <div className={styles.navbarButtons}>
           <Link to="/angariacao" className={styles.navButton}>Angariação</Link>
-          <Link to="/leilao" className={styles.navButton}>Leilão</Link>
+          <Link to="/leilaopage" className={styles.navButton}>Leilão</Link>
           <Link to="/tickets" className={styles.navButton}>Tickets</Link>
           <Link to="/reclamação" className={styles.navButton}>Reclamação</Link>
         </div>

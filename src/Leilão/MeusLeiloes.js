@@ -28,7 +28,7 @@ const MeusLeiloes = () => {
     setIsLoading(true);
     try {
       // Chamada real à API com o ID do utilizador autenticado
-      const response = await fetch(`/vendedor=${user.id}`);
+      const response = await fetch(`http://localhost:5218/myLeiloes?userID=${user.id}`);
       
       if (!response.ok) {
         throw new Error('Erro ao buscar leilões');
@@ -154,7 +154,7 @@ const MeusLeiloes = () => {
                     <img src="https://via.placeholder.com/150" alt="Sem imagem" />
                   )}
                   <span className={styles.statusBadge} data-status={leilao.estado.toLowerCase()}>
-                    {leilao.estado === 'ATIVO' ? 'Ativo' : 'Encerrado'}
+                    {leilao.estado === 'ATIVO' ? 'Ativo' : 'Fechado'}
                   </span>
                 </div>
                 <div className={styles.leilaoInfo}>
