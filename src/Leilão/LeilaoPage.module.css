@@ -1,0 +1,251 @@
+/* src/Leilão/LeilaoPage.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: #e74c3c;
+}
+
+.auctionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (min-width: 1280px) {
+  .auctionGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.auctionCard {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.auctionCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.auctionImage {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.auctionImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeLeft {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #4c4c4c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.statusBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #3498db;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.auctionDetails {
+  padding: 20px;
+}
+
+.title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.description {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.bidInfo {
+  margin-bottom: 15px;
+}
+
+.bidRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.bidLabel {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.initialAmount, .currentAmount {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.currentAmount {
+  color: #e74c3c;
+}
+
+.dateInfo, .statusInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dateLabel, .statusLabel {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.dateValue, .statusValue {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.bidButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.bidButton:hover {
+  background-color: #2980b9;
+}
+
+.bidButton:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.userLocation {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+/* Novos estilos para a barra de pesquisa */
+.searchContainer {
+  margin: 30px 0;
+}
+
+.searchForm {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.searchButton {
+  padding: 12px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #2980b9;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .auctionGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .searchForm {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .auctionGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .searchForm {
+    flex-direction: column;
+  }
+  
+  .searchInput {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .searchButton {
+    border-radius: 4px;
+    width: 100%;
+  }
+}
