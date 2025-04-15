@@ -1,0 +1,98 @@
+.reclamacao-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reclamacao-voltar {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.reclamacao-voltar:hover {
+  text-decoration: underline;
+}
+
+.reclamacao-titulo {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #333;
+}
+
+.reclamacao-input,
+.reclamacao-textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 2.5px solid #000000;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.reclamacao-botao {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.reclamacao-botao:hover {
+  background-color: #0056b3;
+}
+
+.reclamacao-mensagem {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.reclamacao-lista {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.reclamacao-item {
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 0;
+}
+
+.reclamacao-item strong {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.reclamacao-vazio {
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.reclamacao-historico {
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.reclamacao-historico:hover {
+  background-color: #0056b3;
+}
