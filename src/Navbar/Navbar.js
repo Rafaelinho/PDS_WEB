@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link to="/angariacao" className={styles.navButton}>Angariação</Link>
           <Link to="/leilaopage" className={styles.navButton}>Leilão</Link>
           <Link to="/tickets" className={styles.navButton}>Tickets</Link>
-          <Link to="/reclamação" className={styles.navButton}>Reclamação</Link>
+          <Link to="/reclamacao" className={styles.navButton}>Reclamação</Link>
         </div>
 
         <div className={styles.userProfile} ref={dropdownRef}>
@@ -75,7 +75,7 @@ const Navbar = () => {
               <Link to="/perfil" className={styles.dropdownItem}>Perfil</Link>
               <Link to="/meus-leiloes" className={styles.dropdownItem}>Meus Leilões</Link>
               <Link to="/minhas-angariacoes" className={styles.dropdownItem}>Minhas Angariações</Link>
-              <Link to="/meus-tickets" className={styles.dropdownItem}>Meus Tickets</Link>
+              <Link to="/minhas-reclamacoes" className={styles.dropdownItem}>Minhas Reclamações</Link>
               <div className={styles.dropdownDivider}></div>
               <button 
                 onClick={handleLogout} 
