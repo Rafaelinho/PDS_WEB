@@ -8,7 +8,7 @@ import Angariacao from './Angariacao/Angariacao.js';
 import LeilaoPage from './Leilão/LeilaoPage.js';
 import MeusLeiloes from './Leilão/MeusLeiloes.js';
 import Reclamacao from "./Reclamacao/Reclamacao";
-
+import MinhasReclamacoes from "./Reclamacao/MinhaReclamacao";
 
 
 
@@ -26,6 +26,7 @@ function App() {
           <Route path="/angariacoes" element={<Angariacao />} />
           <Route path="/meus-leiloes" element={<MeusLeiloes />} />
           <Route path="/reclamacao" element={<Reclamacao />} />
+          <Route path="/minhas-reclamacoes" element={<MinhasReclamacoes />} />
         </Routes>
       </Router>
     </AuthProvider>

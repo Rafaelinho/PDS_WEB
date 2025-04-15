@@ -75,7 +75,7 @@ const Navbar = () => {
               <Link to="/perfil" className={styles.dropdownItem}>Perfil</Link>
               <Link to="/meus-leiloes" className={styles.dropdownItem}>Meus Leilões</Link>
               <Link to="/minhas-angariacoes" className={styles.dropdownItem}>Minhas Angariações</Link>
-              <Link to="/meus-tickets" className={styles.dropdownItem}>Meus Tickets</Link>
+              <Link to="/minhas-reclamacoes" className={styles.dropdownItem}>Minhas Reclamações</Link>
               <div className={styles.dropdownDivider}></div>
               <button 
                 onClick={handleLogout} 
