@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Link, useNavigate } from "react-router-dom";
-import "./Reclamacao.css";
+import styles from './Reclamacao.module.css';
 
 function Reclamacao() {
   const [assunto, setAssunto] = useState("");
@@ -37,33 +37,33 @@ function Reclamacao() {
   return (
     <>
       <Navbar />
-      <div className="reclamacao-container">
-        <Link to="/" className="reclamacao-voltar">← Voltar</Link>
+      <div className={styles["reclamacao-container"]}>
+        <Link to="/" className={styles["reclamacao-voltar"]}>← Voltar</Link>
 
-        <h2 className="reclamacao-titulo">Criar Reclamação</h2>
+        <h2 className={styles["reclamacao-titulo"]}>Criar Reclamação</h2>
 
         <input
           type="text"
           placeholder="Assunto"
           value={assunto}
           onChange={(e) => setAssunto(e.target.value)}
-          className="reclamacao-input"
+          className={styles["reclamacao-input"]}
         />
 
         <textarea
           placeholder="Descrição detalhada"
           value={descricao}
           onChange={(e) => setDescricao(e.target.value)}
-          className="reclamacao-textarea"
+          className={styles["reclamacao-textarea"]}
         />
 
-        <button onClick={enviarReclamacao} className="reclamacao-botao">
+        <button onClick={enviarReclamacao} className={styles["reclamacao-botao"]}>
           Enviar Reclamação
-        </button> <br/>
+        </button> <br />
 
-        {mensagem && <p className="reclamacao-mensagem">{mensagem}</p>}
+        {mensagem && <p className={styles["reclamacao-mensagem"]}>{mensagem}</p>}
 
-        <button onClick={() => navigate("/minhas-reclamacoes")} className="reclamacao-historico">
+        <button onClick={() => navigate("/minhas-reclamacoes")} className={styles["reclamacao-historico"]}>
           Ver Histórico
         </button>
       </div>

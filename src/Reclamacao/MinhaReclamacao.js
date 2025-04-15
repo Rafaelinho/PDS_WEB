@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
-import "./Reclamacao.css";
+import styles from "./Reclamacao.module.css";
 
 function MinhasReclamacoes() {
   const [reclamacoes, setReclamacoes] = useState([]);
@@ -30,17 +30,17 @@ function MinhasReclamacoes() {
   return (
     <>
       <Navbar />
-      <div className="reclamacao-container">
-        <Link to="/reclamacao" className="reclamacao-voltar">Criar Reclamação</Link>
+      <div className={styles["reclamacao-container"]}>
+        <Link to="/reclamacao" className={styles["reclamacao-voltar"]}>Criar Reclamação</Link>
 
-        <h2 className="reclamacao-titulo">Histórico de Reclamações</h2>
+        <h2 className={styles["reclamacao-titulo"]}>Histórico de Reclamações</h2>
 
         {reclamacoes.length === 0 ? (
-          <p className="reclamacao-vazio">Ainda não foram criadas reclamações.</p>
+          <p className={styles["reclamacao-vazio"]}>Ainda não foram criadas reclamações.</p>
         ) : (
-          <ul className="reclamacao-lista">
+          <ul className={styles["reclamacao-lista"]}>
             {reclamacoes.map((rec) => (
-              <li key={rec.reclamacaoId} className="reclamacao-item">
+              <li key={rec.reclamacaoId} className={styles["reclamacao-item"]}>
                 <strong>{rec.assunto}</strong>
                 <p>{rec.descricao}</p>
               </li>
